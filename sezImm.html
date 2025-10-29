@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleria Immagini</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding-top: 70px;  
+    }
+    /* Navbar fissa */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #00aced;
+    }
+    .navbar a.active {
+      color: #3b82f6; /* Tailwind blue-500 */
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function vaiAPagina(url) {
+      window.location.href = url;
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <!-- <a href="index.html"><img src="images/loSpaLogo.jpg" width="100" ></a> -->
+    <a href="pag2.html">LOSPA</a>
+    <a href="index.html">Pag1</a>
+    <a href="pag1.html">Pag2</a>
+    <!-- <a href="pag3.html">Pag3</a> -->
+    <a href="sezImm.html" class="active">Sezione Immagini</a>
+  </nav>
+
+  <!-- Contenuto con spazio per navbar -->
+  <section class="max-w-6xl mx-auto p-6 pt-28">
+    <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">
+      Sezione Immagini
+    </h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <a href="https://cooperativalarete.it/"><img src="images/laRete.png" class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"></a>
+      <img src="images/logo2.png"  class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="images/loSpa.jpg"  class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <img src="images/loSpaLogo.jpg"  class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300" onclick="vaiAPagina('pag2.html')">
+    </div>
+  </section>
+
+</body>
+</html>

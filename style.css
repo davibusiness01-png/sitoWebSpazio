@@ -1,0 +1,42 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00aced;
+}
+
+.navbar a.active {
+    color: #3b82f6; /* blu */
+    font-weight: bold;
+}
+
+/* Sfondo del logo */
+.bg-logo {
+    position: fixed;
+    inset: 0;
+    background-image: url('images/loSpaLogo.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; /*0.15 meglio o 0.5*/
+    z-index: -1;
+}

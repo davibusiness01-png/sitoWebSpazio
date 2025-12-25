@@ -1,1 +1,75 @@
-!
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOSPA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="images/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bg-logo {
+      position: fixed;
+      top: 70px;              /* height of navbar */
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('images/LoSpazio Brochure_page-0002.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 1; /*0.15 meglio o 0.5*/
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="pag2.html"><img src="images/loSpazioNoBg.png" alt="Logo LOSPA" width="120"></a>
+    <a href="pag1.html">Il Progetto</a>
+    <a href="pag3.html" class="active">Pag2</a>
+    <a href="chiSiamo.html">Chi siamo</a>
+    <a href="galleria.html">Galleria</a>
+  </nav>
+
+  <!-- SFONDO LOGO -->
+  <div class="bg-logo"></div>
+
+  <!-- CONTENUTO 
+  <main class="pt-32 text-center px-6">
+    <h1 class="text-5xl font-extrabold text-gray-800 mb-4 hover:text-blue-600 transition">
+      <a href="index.html">LOSPA</a>
+    </h1>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+      Benvenuto su <span class="font-semibold text-blue-500"><a href="pag2.html">LOSPA</a></span> — dove stile e creatività si incontrano.
+    </p>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo sit quo accusamus molestiae consectetur beatae laboriosam voluptas veritatis asperiores tempora rem animi sequi nisi optio cumque reprehenderit, vel, reiciendis voluptatem.
+    Velit doloremque consequuntur incidunt quos, dignissimos aliquid architecto deserunt eum, quod molestias voluptatibus nobis doloribus modi labore totam dolorem iusto quaerat debitis blanditiis. Nam dolorem magnam incidunt eius deleniti consequuntur.
+    Expedita, ea nihil. Explicabo fugiat nemo ea cum cupiditate excepturi totam perspiciatis provident iste deserunt exercitationem, optio, autem asperiores aut quas eligendi? Debitis blanditiis sit expedita ad odit ipsum quam.
+    Blanditiis aliquid voluptates officiis doloremque similique nisi voluptatum corporis aspernatur. Impedit vero eum, nobis sunt officiis quibusdam repellendus soluta exercitationem vel rem dolor veritatis non rerum eaque illum, incidunt minima.
+    Ipsum amet tenetur eaque magnam? Eaque repellendus, quaerat eos cumque dolorem soluta velit voluptate odio dolor? Saepe nam id recusandae nobis adipisci, facilis laudantium voluptate quae, sed sit vel culpa.
+    Veniam, illo quam. Quibusdam neque dolorum eius commodi expedita nemo maxime et labore temporibus harum animi velit maiores explicabo, itaque ratione! Tempora perspiciatis, quia esse minus repellat eius dolor consequatur.
+    Voluptates dolores minus magni placeat earum obcaecati, aliquid, velit totam accusantium sunt, architecto porro! Ipsum quam iusto minus molestiae expedita incidunt sit, quibusdam eos recusandae alias quae natus illo dolorum.
+    Ullam beatae reprehenderit totam et consectetur atque sed pariatur repellat asperiores nobis dolores corporis, maxime cum placeat perspiciatis aspernatur fugit ipsam accusamus ab vero repellendus sequi cupiditate quibusdam. Illum, quod.
+    Debitis deleniti obcaecati quod ipsa fugit voluptates temporibus adipisci? Rem pariatur ratione ullam nesciunt ad est eaque, aspernatur, tempore earum incidunt eligendi eveniet placeat quaerat ut consectetur fuga temporibus? Rerum?
+    Itaque voluptas velit est ipsa, perspiciatis amet id beatae ea possimus quae ratione aliquid labore obcaecati! Adipisci distinctio, magnam accusantium dignissimos, saepe reprehenderit fuga rerum animi repellat quos molestias possimus.</p>
+  </main> -->
+
+  <script>
+    const bg = document.querySelector('.bg-logo');
+
+    let isFirstImage = true;
+
+    bg.addEventListener('click', () => {
+      if (isFirstImage) {
+        bg.style.backgroundImage = "url('images/LoSpazio Brochure_page-0002.jpg')";
+      } else {
+        bg.style.backgroundImage = "url('images/LoSpazio Brochure_page-0001.jpg')";
+      }
+      isFirstImage = !isFirstImage;
+    });
+  </script>
+</body>
+</html>

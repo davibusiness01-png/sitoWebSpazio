@@ -54,8 +54,23 @@
     Itaque voluptas velit est ipsa, perspiciatis amet id beatae ea possimus quae ratione aliquid labore obcaecati! Adipisci distinctio, magnam accusantium dignissimos, saepe reprehenderit fuga rerum animi repellat quos molestias possimus.</p>
   </main> -->
 
+  <script>
+    const bg = document.querySelector('.bg-logo');
+
+    let isFirstImage = true;
+
+    bg.addEventListener('click', () => {
+      if (isFirstImage) {
+        bg.style.backgroundImage = "url('images/LoSpazio Brochure_page-0002.jpg')";
+      } else {
+        bg.style.backgroundImage = "url('images/LoSpazio Brochure_page-0001.jpg')";
+      }
+      isFirstImage = !isFirstImage;
+    });
+  </script>
 </body>
 </html>
+
 
 
 

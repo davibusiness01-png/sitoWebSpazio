@@ -18,7 +18,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      opacity: 1; /*0.15 meglio o 0.5*/
+      opacity: 0.5; /*0.15 meglio o 0.5*/
       z-index: -1;
     }
   </style>
@@ -37,7 +37,7 @@
   <!-- SFONDO LOGO -->
   <div class="bg-logo"></div>
 
-  <!-- CONTENUTO 
+  <!-- CONTENUTO -->
   <main class="pt-32 text-center px-6">
     <h1 class="text-5xl font-extrabold text-gray-800 mb-4 hover:text-blue-600 transition">
       <a href="index.html">LOSPA</a>
@@ -55,24 +55,10 @@
     Ullam beatae reprehenderit totam et consectetur atque sed pariatur repellat asperiores nobis dolores corporis, maxime cum placeat perspiciatis aspernatur fugit ipsam accusamus ab vero repellendus sequi cupiditate quibusdam. Illum, quod.
     Debitis deleniti obcaecati quod ipsa fugit voluptates temporibus adipisci? Rem pariatur ratione ullam nesciunt ad est eaque, aspernatur, tempore earum incidunt eligendi eveniet placeat quaerat ut consectetur fuga temporibus? Rerum?
     Itaque voluptas velit est ipsa, perspiciatis amet id beatae ea possimus quae ratione aliquid labore obcaecati! Adipisci distinctio, magnam accusantium dignissimos, saepe reprehenderit fuga rerum animi repellat quos molestias possimus.</p>
-  </main> -->
-
-  <script>
-    const bg = document.querySelector('.bg-logo');
-
-    let isFirstImage = true;
-
-    bg.addEventListener('click', () => {
-      if (isFirstImage) {
-        bg.style.backgroundImage = "url('images/LoSpazio Brochure_page-0002.jpg')";
-      } else {
-        bg.style.backgroundImage = "url('images/LoSpazio Brochure_page-0001.jpg')";
-      }
-      isFirstImage = !isFirstImage;
-    });
-  </script>
+  </main>
 </body>
 </html>
+
 
 
 

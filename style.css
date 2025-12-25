@@ -23,7 +23,7 @@
 
 .navbar a:hover {
     /*color: #00aced;*/
-    color: #FFDF58;
+    color: #E2C650;
 }
 
 .navbar a.active {
@@ -44,5 +44,6 @@
     z-index: -1;
 
 }
+
 
 

@@ -3,7 +3,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #050505;
+    /*background-color: #050505;*/
+    background-color: #212121;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,11 +22,13 @@
 }
 
 .navbar a:hover {
-    color: #00aced;
+    /*color: #00aced;*/
+    color: #FFDF58;
 }
 
 .navbar a.active {
-    color: #3b82f6; /* blu */
+    /* color: #3b82f6;  blu */
+    color: #FFDF58;
     font-weight: bold;
 }
 
@@ -41,4 +44,5 @@
     z-index: -1;
 
 }
+
 

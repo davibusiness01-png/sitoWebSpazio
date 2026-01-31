@@ -16,7 +16,7 @@
     color: white;
     text-decoration: none;
     margin: 0 20px;
-    font-size: 16px;
+    font-size: 14px;
     transition: color 0.3s ease;
 }
 
@@ -43,6 +43,7 @@
     z-index: -1;
 
 }
+
 
 
 

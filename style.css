@@ -12,12 +12,11 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
-
 .navbar a {
     color: white;
     text-decoration: none;
     margin: 0 20px;
-    font-size: 18px;
+    font-size: 16px;
     transition: color 0.3s ease;
 }
 
@@ -44,6 +43,7 @@
     z-index: -1;
 
 }
+
 
 
 

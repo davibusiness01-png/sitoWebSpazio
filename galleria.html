@@ -12,6 +12,56 @@
       background-color: #FFDF58; 
     }
     .navbar a { font-size: 16px; }
+    /* Viewer Overlay */
+    .image-viewer {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+    }
+
+    .image-viewer.active {
+      display: flex;
+    }
+
+    .image-viewer img {
+      max-width: 90vw;
+      max-height: 90vh;
+      cursor: grab;
+      transition: transform 0.15s ease;
+    }
+
+    /* Controls */
+    .viewer-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+    }
+
+    .viewer-btn.prev {
+      left: 20px;
+    }
+
+    .viewer-btn.next {
+      right: 20px;
+    }
+
+    .viewer-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 36px;
+      cursor: pointer;
+      color: white;
+    }
   </style>
   <script>
     function vaiAPagina(url) {
@@ -40,7 +90,14 @@
     <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">
       Galleria
     </h1>
-
+    
+    <div id="imageViewer" class="image-viewer" role="dialog" aria-modal="true">
+      <span class="viewer-close" aria-label="Close">&times;</span>
+      <span class="viewer-btn prev" aria-label="Previous">&#10094;</span>
+      <img id="viewerImg" alt="">
+      <span class="viewer-btn next" aria-label="Next">&#10095;</span>
+    </div>
+    
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <img src="images/5857405660633435066.jpg"  class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300" width="200px">
       <img src="images/5857405660633435067.jpg"  class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300" width="200px">
@@ -54,8 +111,86 @@
       <img src="images/loSpaLogo.jpg"  class="rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300" onclick="vaiAPagina('pag2.html')">-->
     </div>
   </section>
+  <script>
+    (() => {
+      const viewer = document.getElementById("imageViewer");
+      const img = document.getElementById("viewerImg");
+      const images = () => [...document.querySelectorAll("img[data-viewer]")];
+      let index = 0;
+      let scale = 1;
+      let startX = 0;
 
+      function open(i) {
+        index = i;
+        scale = 1;
+        img.style.transform = "scale(1)";
+        img.src = images()[index].src;
+        img.alt = images()[index].alt || "";
+        viewer.classList.add("active");
+        document.body.style.overflow = "hidden";
+        img.focus();
+      }
+
+      function close() {
+        viewer.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      function next() {
+        open((index + 1) % images().length);
+      }
+
+      function prev() {
+        open((index - 1 + images().length) % images().length);
+      }
+
+      // Image click binding (auto)
+      document.addEventListener("click", e => {
+        const imgs = images();
+        const i = imgs.indexOf(e.target);
+        if (i !== -1) open(i);
+      });
+
+      // Controls
+      viewer.querySelector(".viewer-close").onclick = close;
+      viewer.querySelector(".next").onclick = next;
+      viewer.querySelector(".prev").onclick = prev;
+
+      viewer.addEventListener("click", e => {
+        if (e.target === viewer) close();
+      });
+
+      // Keyboard
+      document.addEventListener("keydown", e => {
+        if (!viewer.classList.contains("active")) return;
+        if (e.key === "Escape") close();
+        if (e.key === "ArrowRight") next();
+        if (e.key === "ArrowLeft") prev();
+      });
+
+      // Zoom (mouse wheel)
+      img.addEventListener("wheel", e => {
+        e.preventDefault();
+        scale += e.deltaY * -0.001;
+        scale = Math.min(Math.max(1, scale), 3);
+        img.style.transform = `scale(${scale})`;
+      });
+
+      // Swipe (mobile)
+      img.addEventListener("touchstart", e => {
+        startX = e.touches[0].clientX;
+      });
+
+      img.addEventListener("touchend", e => {
+        const endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) next();
+        if (endX - startX > 50) prev();
+      });
+
+    })();
+  </script>
 </body>
 </html>
+
 
 

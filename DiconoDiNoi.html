@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOSPA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="images/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bg-logo {
+      position: fixed;
+      top: 70px;              /* height of navbar */
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #FFDF58; 
+      background-image : none;
+      opacity: 1; /*0.15 meglio o 0.5*/
+      z-index: -1;
+    }
+    .navbar a { font-size: 16px; }
+  </style>
+</head>
+<body class="bg-gray-100">
 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="pag2.html"><img src="images/loSpazioNoBg.png" alt="Logo LOSPA" width="120"></a>
+    <a href="index.html">Il Progetto</a>
+    <a href="pag3.html" class="active">Assemblea Di Gestione</a>
+    <a href="pag1.html">Laboratori Co-Prodotti</a>
+    <a href="Attività.html">Attività Esterne Sul Territorio</a>
+    <a href="lavoro.html">Il Mondo Del Lavoro</a>
+    <a href="DiconoDiNoi.html">Dicono Di Noi</a>
+    <a href="chiSiamo.html">Contatti</a>
+    <a href="galleria.html">Galleria</a>
+  </nav>
+
+  <!-- SFONDO LOGO -->
+  <div class="bg-logo"></div>
+
+  <!-- CONTENUTO -->
+  <main class="pt-32 text-center px-6">
+    <!--<h1 class="text-5xl font-extrabold text-gray-800 mb-4 hover:text-blue-600 transition">-->
+    <h1 class="text-5xl font-extrabold text-gray-800 mb-4 transition">    
+      <a href="index.html">LOSPA</a>
+    </h1>
+    <!--<p class="text-lg text-gray-700 max-w-2xl mx-auto">
+      Benvenuto su <span class="font-semibold text-blue-500"><a href="pag2.html">LOSPA</a></span> — dove stile e creatività si incontrano.
+    </p>-->
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">L’assemblea di gestione è un’attività di governo de LoSpazio nella sua gestione quotidiana, nella quale vengono discusse e condivise idee e proposte di sviluppo di progetti e nuove attività orientate allo sviluppo di competenze per l’autonomia che verranno successivamente sviluppate nel laboratorio di progettazione co-prodotta di attività</p>
+  </main>
+</body>
+</html>

@@ -22,6 +22,17 @@
       z-index: -1;
     }
     .navbar a { font-size: 16px; }
+    .img-container {
+  display: flex;
+  justify-content: space-between; /* spazio tra le immagini */
+  align-items: center;
+  gap: 20px; /* spazio tra le immagini */
+}
+
+.img-container img {
+  width: 45%;  /* così stanno affiancate */
+  height: auto;
+}
   </style>
 </head>
 <body class="bg-gray-100">
@@ -68,8 +79,10 @@ Accompagnati da un regista professionista, un gruppo di ragazzi, ha raccontato i
 <h4 class="text-4xl font-extrabold text-gray-800 mb-4 transition text-center">
   CIAK SI GIRA!
 </h4>
-<img src="images/1.png" width="500" height="600">
-<img src="images/2.png" width="500" height="600">    
+<div class="img-container">
+  <img src="images/1.png">
+  <img src="images/2.png">
+</div>    
 <h4 class="text-3xl font-bold text-gray-800 mb-4 text-center">
   Laboratorio di videomaking – Dietro le quinte della città
 </h4>

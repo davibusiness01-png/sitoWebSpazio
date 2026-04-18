@@ -33,6 +33,17 @@
   width: 35%;  /* così stanno affiancate */
   height: auto;
 } 
+    .gallery {
+  display: flex;
+  flex-wrap: wrap;   /* va a capo se non ci stanno */
+  gap: 20px;         /* spazio tra immagini */
+  justify-content: center;
+}
+
+.gallery img {
+  width: 40%;
+  height: auto;
+}
   </style>
 </head>
 <body class="bg-gray-100">
@@ -92,12 +103,12 @@ Accompagnati da un regista professionista, un gruppo di ragazzi, ha raccontato i
   <br><br>
   Accompagnato da un regista professionista, un gruppo di ragazzi ha raccontato i luoghi e le persone protagoniste dell’evento attraverso fotografie e video-interviste.
 <br><br><br><br></p>
-    <div class="poster">
-  <img src="images/IMG20260214150849.jpg" width="40%">
-  <img src="images/IMG20260221160857.jpg" width="40%">
-  <img src="images/IMG20260221172621.jpg" width="40%">
-  <img src="images/IMG20260314183856.jpg" width="40%">
-  <img src="images/IMG20260314205247.jpg" width="40%">  
+    <div class="gallery">
+  <img src="images/IMG20260214150849.jpg">
+  <img src="images/IMG20260221160857.jpg">
+  <img src="images/IMG20260221172621.jpg">
+  <img src="images/IMG20260314183856.jpg">
+  <img src="images/IMG20260314205247.jpg">  
     </div>
   </main>
 </body>
